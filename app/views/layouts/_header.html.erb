@@ -1,0 +1,12 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <nav>
+    <ul>
+      <li><%= link_to "Home", root_path%></li>
+      <% if user_signed_in? %>
+          <li><%= link_to "Log out", destroy_user_session_url, method: "delete" %></li>
+      <% else %>
+          <li><%= link_to "Log in", new_user_session_url %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
