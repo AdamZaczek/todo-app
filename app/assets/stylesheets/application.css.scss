@@ -36,8 +36,8 @@ body {
 }
 
 .container {
-	width: 50%;
-	max-width: 750px;
+	width: 70%;
+	max-width: 1000px;
 	background: $white_opaque;
 	margin: 3em auto 0 auto;
 	border-radius: 7px;
@@ -199,6 +199,19 @@ input[type="submit"] {
 #notice {
 	color: white;
 	font-size: 2rem;
+}
+
+ul.hmenu {
+  list-style: none; 
+  margin: 0 0 2em;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center
+}
+
+ul.hmenu li {
+  display: inline;  
 }
 
 ::-webkit-input-placeholder { color: $dark; }

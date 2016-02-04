@@ -9,11 +9,15 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<%= render 'layouts/header' %>
-      <% flash.each do |message_type, message| %>
+    <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
-
-    <%= yield %>
+    <% end %>
+    <ul class="hmenu">
+        <%= render 'devise/menu/registration_items' %>
+        <%= render 'devise/menu/login_items' %>
+    </ul>
+    <div class="container">
+        <%= yield %>
+    </div>
 </body>
 </html>
