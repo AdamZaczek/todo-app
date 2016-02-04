@@ -4,13 +4,14 @@ Rails.application.routes.draw do
     root to: 'todo_lists#index', as: :authenticated_root
   end
   root to: redirect("/users/sign_in")
-  
-  resources :todo_lists do
-    resources :todo_items do
-      member do
+
+  authenticate :user do  
+    resources :todo_lists do
+      resources :todo_items do
+        member do
         patch :complete
+        end
       end
     end
   end
-
 end
